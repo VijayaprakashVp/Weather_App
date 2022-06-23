@@ -4,7 +4,9 @@ export const Weather = () => {
   const [city, setCity] = useState("");
 
   const handleRequest = () => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f0b508144c618aa53e1bc61046fe2362`)
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f0b508144c618aa53e1bc61046fe2362`,
+    )
       .then((res) => res.json())
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
@@ -16,6 +18,7 @@ export const Weather = () => {
       <input
         type="text"
         value={city}
+        style={{ width: "150px", marginLeft: "5px" }}
         onChange={(e) => setCity(e.target.value)}
       />
       <br />
