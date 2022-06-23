@@ -6,7 +6,7 @@ import { Heading } from "@chakra-ui/react";
 function App() {
   return (
     <div className="App">
-      <Heading>Weather App</Heading>
+      <Heading>The Weather App</Heading>
       <Routes>
         <Route path="/" element={<Weather />} />
       </Routes>
